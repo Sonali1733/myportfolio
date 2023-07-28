@@ -4,21 +4,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Basic HTML</title>
+  <title>My Portfolio</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <main>
-    <nav class='navBar'>
-      <h1>Sonali Donadkar Portfolio</h1>
-      <div class='navigationMenu'>
-        <a href='#aboutMe'>About me</a>
-        <a href='#skills'>Skills</a>
-        <a href='#projects'>Certifications</a>
-        <a href='#contactForm'>Let's Connect</a>
+    
+<body>
+  <header>
+      <a href="" class="logo">Sonali</a>
+      <div class="group">
+          <ul class="navigation">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="search">
+              <span class="icon">
+                  <ion-icon name="search-outline" id="searchBtn"></ion-icon>
+                  <ion-icon name="close-outline" id="closeBtn"></ion-icon>
+              </span>
+              <ion-icon name="grid-outline" class="menuToggle"></ion-icon>
+          </div>
       </div>
-    </nav>
+      <div class="searchBox" id="searchBoxBtn">
+          <input type="text" name="" id="" placeholder="Search here...">
+      </div>
+  </header>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- js personalizado  -->
+  
+<script>let iconSearchBtn = document.getElementById("searchBtn");
+  let iconCloseBtn = document.getElementById('closeBtn');
+  let searchBox = document.getElementById('searchBoxBtn');
+  let navigation = document.querySelector('.navigation');
+  let iconMenuToggle = document.querySelector('.menuToggle');
+  let header = document.querySelector('header');
+  
+  iconSearchBtn.onclick = function(){
+      searchBox.classList.add('active');
+      iconCloseBtn.classList.add('active');
+      iconSearchBtn.classList.add('active');
+      iconMenuToggle.classList.add('hide');
+      header.classList.remove('open');
+  }
+  iconCloseBtn.onclick = function(){
+      searchBox.classList.remove('active');
+      iconCloseBtn.classList.remove('active');
+      iconSearchBtn.classList.remove('active');
+      iconMenuToggle.classList.remove('hide');
+  }
+  iconMenuToggle.onclick = function(){
+      header.classList.toggle('open');
+      searchBox.classList.remove('active');
+      iconCloseBtn.classList.remove('active');
+      iconSearchBtn.classList.remove('active');
+      
+  }
+  </script>
+  <br><br><br>
+  <br>
     <section class='heroSection'>
       <img class='profileImage'
         src='Images\Profile.jpeg'>
