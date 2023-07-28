@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Basic HTML</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <main>
+    <nav class='navBar'>
+      <h1>Sonali Donadkar Portfolio</h1>
+      <div class='navigationMenu'>
+        <a href='#aboutMe'>About me</a>
+        <a href='#skills'>Skills</a>
+        <a href='#projects'>Certifications</a>
+        <a href='#contactForm'>Let's Connect</a>
+      </div>
+    </nav>
+    <section class='heroSection'>
+      <img class='profileImage'
+        src='Images\Profile.jpeg'>
+      <div class='herosectionDetails'>
+        <h1>Sonali Donadkar</h1>
+        <h3>Intern at Bharat Intern</h3>
+      </div>
+    </section>
+    <section class='aboutMe' id='aboutMe'>
+      <h1>My Work</h1>
+
+    </section>
+    <section class='skillsAndProjects'>
+      <div class='skills' id='skills'>
+        <h1 class='cardHeading'>Skills</h1>
+        <img src="Images\c.png" title='c'>
+        <img src="Images\c++.png" title='c++'>
+        <img src="Images\java.png" title='Java'>
+        <img src="Images\python.png" title='Python'>
+        <img src="Images\sql.png" title='SQL'>
+        <img src="Images\powerbi.png" title='Power BI'>
+        <img src="Images\html.png" title='HTML'>
+        <img src="Images\css.png" title='CSS'>
+      </div>
+      <div class='projects' id='projects'>
+        <h1 class='cardHeading'>Certifications</h1>
+        <div class='projectContainer'>
+          <img src="Images\css.png"'>
+          <div class='projectDescription'>
+            <h4>Certification name</h4>
+            <p>Some details</p>
+          </div>
+        </div>
+        <div class='projectContainer'>
+          <img src="Images\css.png">
+          <div class='projectDescription'>
+            <h4>Certification name</h4>
+            <p>some details</p>
+          </div>
+        </div>
+      </div>  
+    </section>
+    <section class='contactForm' id='contactForm'>
+      <h2>Let's Connect</h2>
+      <div class='formGroup'>
+        <label for='name'>Enter Full Name</label><br/>
+        <input type='text' id='name' placeholder='Full Name'/>
+      </div>
+      <div class='formGroup'>
+        <label for='email'>Email</label><br/>
+        <input type='text' id='email' placeholder='Email'/>
+      </div>
+      <div class='formGroup'>
+        <label for='message'>Message</label><br/>
+        <textarea placeholder="Send some message!" id="message" name="w3review" rows="4" cols="50"></textarea>
+      </div>
+      <button class='submitButton' onClick={submit()}>Connect</button>
+    </section>
+  </body>
+</html>
