@@ -12,6 +12,7 @@
   <main>
     
 <body>
+
   <header>
       <a href="" class="logo">Sonali</a>
       <div class="group">
@@ -23,49 +24,41 @@
               <li><a href="#">Contact</a></li>
           </ul>
           <div class="search">
-              <span class="icon">
-                  <ion-icon name="search-outline" id="searchBtn"></ion-icon>
-                  <ion-icon name="close-outline" id="closeBtn"></ion-icon>
-              </span>
               <ion-icon name="grid-outline" class="menuToggle"></ion-icon>
           </div>
       </div>
-      <div class="searchBox" id="searchBoxBtn">
-          <input type="text" name="" id="" placeholder="Search here...">
-      </div>
+      
   </header>
+
+  
+
+
+  <script>
+    const menuToggle = document.querySelector('.menuToggle');
+    const header = document.querySelector('header');
+    const navigation = document.querySelector('.navigation');
+  
+    menuToggle.addEventListener('click', () => {
+      header.classList.toggle('open');
+    });
+  
+    // Close the menu when a navigation link is clicked (optional)
+    const navigationLinks = document.querySelectorAll('.navigation li a');
+    navigationLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        header.classList.remove('open');
+      });
+    });
+  </script>
+
+  
+
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"></script>
   <!-- js personalizado  -->
   
-<script>let iconSearchBtn = document.getElementById("searchBtn");
-  let iconCloseBtn = document.getElementById('closeBtn');
-  let searchBox = document.getElementById('searchBoxBtn');
-  let navigation = document.querySelector('.navigation');
-  let iconMenuToggle = document.querySelector('.menuToggle');
-  let header = document.querySelector('header');
-  
-  iconSearchBtn.onclick = function(){
-      searchBox.classList.add('active');
-      iconCloseBtn.classList.add('active');
-      iconSearchBtn.classList.add('active');
-      iconMenuToggle.classList.add('hide');
-      header.classList.remove('open');
-  }
-  iconCloseBtn.onclick = function(){
-      searchBox.classList.remove('active');
-      iconCloseBtn.classList.remove('active');
-      iconSearchBtn.classList.remove('active');
-      iconMenuToggle.classList.remove('hide');
-  }
-  iconMenuToggle.onclick = function(){
-      header.classList.toggle('open');
-      searchBox.classList.remove('active');
-      iconCloseBtn.classList.remove('active');
-      iconSearchBtn.classList.remove('active');
-      
-  }
-  </script>
+
   <br><br><br>
   <br>
     <section class='heroSection'>
@@ -76,40 +69,178 @@
         <h3>Intern at Bharat Intern</h3>
       </div>
     </section>
-    <section class='aboutMe' id='aboutMe'>
-      <h1>My Work</h1>
 
-    </section>
-    <section class='skillsAndProjects'>
-      <div class='skills' id='skills'>
-        <h1 class='cardHeading'>Skills</h1>
-        <img src="Images\c.png" title='c'>
-        <img src="Images\c++.png" title='c++'>
-        <img src="Images\java.png" title='Java'>
-        <img src="Images\python.png" title='Python'>
-        <img src="Images\sql.png" title='SQL'>
-        <img src="Images\powerbi.png" title='Power BI'>
-        <img src="Images\html.png" title='HTML'>
-        <img src="Images\css.png" title='CSS'>
-      </div>
-      <div class='projects' id='projects'>
-        <h1 class='cardHeading'>Certifications</h1>
-        <div class='projectContainer'>
-          <img src="Images\css.png"'>
-          <div class='projectDescription'>
-            <h4>Certification name</h4>
-            <p>Some details</p>
+ 
+
+    <!-- <section class='aboutMe' id='aboutMe'>
+      <h1>My Work</h1>
+      <div class='skillsAndProjects'>
+        <div class='skills' id='skills'>
+          <h1 class='cardHeading'>Skills</h1>
+          <div class="skillsGrid">
+            <img src="Images\c.png" title='c'>
+            <img src="Images\c++.png" title='c++'>
+            <img src="Images\java.png" title='Java'>
+            <img src="Images\python.png" title='Python'>
+            <img src="Images\sql.png" title='SQL'>
+            <img src="Images\powerbi.png" title='Power BI'>
+            <img src="Images\html.png" title='HTML'>
+            <img src="Images\css.png" title='CSS'>
           </div>
-        </div>
-        <div class='projectContainer'>
-          <img src="Images\css.png">
-          <div class='projectDescription'>
-            <h4>Certification name</h4>
-            <p>some details</p>
+        </div> -->
+        <section class='aboutMe' id='aboutMe'>
+          <h1>Skills and Certifications</h1>
+          <div class='skillsAndProjects'>
+            <div class='skills' id='skills'>
+              <h1 class='cardHeading'>Skills</h1>
+              <div class="skillsGrid">
+
+                <div class="skill">
+                  <img src="Images/c.png" title="C">
+                  <div class="skillDetails">
+                    <div class="skillName">C</div>
+                    <div class="rateBar">
+                      <div class="fill" style="width: 80%;">
+                        <span class="percentage">80%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <img src="Images\java.png" title="Java">
+                  <div class="skillDetails">
+                    <div class="skillName">Java</div>
+                    <div class="rateBar">
+                      <div class="fill" style="width: 80%;">
+                        <span class="percentage">80%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <img src="Images\python.png" title="Python">
+                  <div class="skillDetails">
+                    <div class="skillName">Python</div>
+                    <div class="rateBar">
+                      <div class="fill" style="width: 80%;">
+                        <span class="percentage">80%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <img src="Images\sql.png" title="sql">
+                  <div class="skillDetails">
+                    <div class="skillName">SQL</div>
+                    <div class="rateBar">
+                      <div class="fill" style="width: 80%;">
+                        <span class="percentage">80%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <img src="Images\powerbi.png" title="PowerBi">
+                  <div class="skillDetails">
+                    <div class="skillName">PowerBi</div>
+                    <div class="rateBar">
+                      <div class="fill" style="width: 80%;">
+                        <span class="percentage">80%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <img src="Images\html.png" title="HTML">
+                  <div class="skillDetails">
+                    <div class="skillName">HTML</div>
+                    <div class="rateBar">
+                      <div class="fill" style="width: 80%;">
+                        <span class="percentage">80%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <img src="Images\css.png" title="CSS">
+                  <div class="skillDetails">
+                    <div class="skillName">CSS</div>
+                    <div class="rateBar">
+                      <div class="fill" style="width: 80%;">
+                        <span class="percentage">80%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+                <!-- Add more skills with rate bars and images as needed -->
+              </div>
+            </div>
+            <div class='projects' id='projects'>
+              <h1 class='cardHeading'>Certifications</h1>
+              <div class='projectContainer'>
+                <img src="Images/css.png">
+                <div class='projectDescription'>
+                  <h4>Certification name 1</h4>
+                  <p>Some details about certification 1</p>
+                </div>
+              </div>
+              <div class='projectContainer'>
+                <img src="Images/css.png">
+                <div class='projectDescription'>
+                  <h4>Certification name 1</h4>
+                  <p>Some details about certification 1</p>
+                </div>
+              </div>
+              <div class='projectContainer'>
+                <img src="Images/css.png">
+                <div class='projectDescription'>
+                  <h4>Certification name 1</h4>
+                  <p>Some details about certification 1</p>
+                </div>
+              </div>
+              <div class='projectContainer'>
+                <img src="Images/css.png">
+                <div class='projectDescription'>
+                  <h4>Certification name 1</h4>
+                  <p>Some details about certification 1</p>
+                </div>
+              </div>
+              <div class='projectContainer'>
+                <img src="Images/css.png">
+                <div class='projectDescription'>
+                  <h4>Certification name 1</h4>
+                  <p>Some details about certification 1</p>
+                </div>
+              </div>
+              
+              <div class='projectContainer'>
+                <img src="Images/css.png">
+                <div class='projectDescription'>
+                  <h4>Certification name 2</h4>
+                  <p>Some details about certification 2</p>
+                </div>
+              </div>
+              <!-- Add more certification project containers as needed -->
+            </div>
+            <div class='skills' id='skills'>
+              <!-- ... Previous skills code ... -->
+            </div>
           </div>
-        </div>
-      </div>  
-    </section>
+        </section>
+        
+    
+
+    
+    <!-- ... Previous HTML code ... -->
+
     <section class='contactForm' id='contactForm'>
       <h2>Let's Connect</h2>
       <div class='formGroup'>
@@ -124,7 +255,13 @@
         <label for='message'>Message</label><br/>
         <textarea placeholder="Send some message!" id="message" name="w3review" rows="4" cols="50"></textarea>
       </div>
-      <button class='submitButton' onClick={submit()}>Connect</button>
+      <button class='submitButton' onClick="submitForm()">Connect</button>
+    
+     
     </section>
+    
+
+<!-- ... Rest of the HTML code ... -->
+
   </body>
 </html>

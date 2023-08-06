@@ -92,6 +92,11 @@ main::-webkit-scrollbar{
   justify-content: space-evenly; 
 }
 
+.projects {
+  flex: 1;
+  max-width: 100%;
+}
+
 .profileImage{
   width: 350px;
   height: 350px;
@@ -114,14 +119,122 @@ main::-webkit-scrollbar{
   text-align: center;
 }
 
-.skillsAndProjects{
-  margin: 1rem;
-  display: grid;
-  grid-template-columns: [one] 50% [two] 50%;
-  grid-gap: 10px;
+.skillsGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skill {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  width: calc(100% - 2rem);
+  margin-bottom: 10px;
+}
+
+.skill img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.skillDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.skillName {
+  font-size: 18px;
+}
+
+.rateBar {
+  width: 200px;
+  height: 20px;
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #d5a3ec, #cf51d8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 5px rgba(207, 81, 216, 0.8);
+  display: flex;
+  justify-content: flex-end;
+  animation: fillAnimation 2s ease-in-out forwards;
+}
+
+@keyframes fillAnimation {
+  0% {
+    width: 0;
+  }
+}
+
+.percentage {
+  padding: 5px;
+  background-color: rgba(207, 81, 216, 0.8);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.glowAnimation {
+  animation: glowing 2s ease-in-out infinite;
+}
+
+@keyframes glowing {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(207, 81, 216, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(207, 81, 216, 0.8);
+  }
+}
+
+
+.skillsGrid img {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: rgb(255 255 255 / 31%);
+  padding: 10px;
+}
+
+.skillsGrid img:hover {
+  transition: ease-in 300ms;
+  transform: scale(0.85);
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .skillsGrid {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .skillsGrid img {
+    margin: 10px 5px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .skillsGrid {
+    justify-content: center;
+  }
+}
+
+
+.skillsAndProjects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 @media only screen and(max-width: 720px){
@@ -169,51 +282,136 @@ main::-webkit-scrollbar{
   transform: scale(0.85);
   cursor: pointer;
 }
+/* ... Previous CSS code ... */
 
-.projectContainer{
+.aboutMe {
   display: flex;
-  width: 90;
+  flex-direction: column;
+  align-items: center;
 }
 
-.projectContainer > img{
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: rgb(255 255 255 / 31%);
+  border: 1px solid rgb(255 255 255 / 31%);
+  border-radius: 5px;
+  padding: 1rem;
+  animation: fadeInUp 1s ease;
+}
+
+.projectContainer img {
   width: 60px;
   height: 60px;
   padding-right: 10px;
 }
 
-.projectContainer > .projectDescription > h4{
+.projectDescription {
+  flex: 1;
+}
+
+.projectDescription h4 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.projectDescription p {
   margin: 0;
 }
 
-.projectContainer > .projectDescription > p{
-  margin: 0;
-  margin-bottom: 1rem;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.contactForm{
+
+ /* contact form start */
+ .contactForm {
   margin: 2rem;
-  width: clac(100% - 4rem);
+  width: calc(100% - 4rem);
   background-color: rgb(255 255 255/ 31%);
-  border: 1px solid rgb(255 255 255/31%);
+  border: 1px solid rgb(255 255 255/ 31%);
   border-radius: 5px;
   padding: 1rem;
 }
 
-.contactForm > .formGroup{
+.contactForm h2 {
+  text-align: center;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
-.formGroup > input, .formGroup > textarea{
-  width: 100%;
-  padding: 5px 10px;
-  margin-top: 5px;
-  font-weight: 600;
+
+.formGroup {
+  margin-bottom: 1rem;
 }
 
-.submitButton{
+.formGroup label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.submitButton {
   padding: 10px 20px;
   font-weight: 600;
   font-size: 15px;
+  background-color: rgb(101, 186, 158);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.submitButton:hover {
+  background-color: rgb(32, 119, 90);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contactForm {
+  animation: fadeIn 0.5s ease;
+}
+
+/* contact form end  */
+
 
 @media only screen and (max-width: 460px){
   .profileImage{
@@ -400,7 +598,6 @@ header .search{
         left:0;
     }
     .menuToggle{
-        position: absolute;
         display: block;
         font-size: 1em;
         cursor: pointer;
@@ -419,30 +616,46 @@ header .search{
         visibility: hidden;
         left: 100%;
     }
-    header.open .navigation{
-        top: 80px;
-        opacity: 1;
-        visibility: visible;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        background: rgb(56, 117, 96);
-        width: 100%;
-        height: calc(100vh - 80px);
-        padding: 40px;
-        text-align: left;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
-        transition:1s;
-        -webkit-transition:1s;
-        -moz-transition:1s;
-        -ms-transition:1s;
-        -o-transition:1s;
-}
-    header.open .navigation li a{
-        font-size: clamp(12px, 3em, 3em);
-        color: #ffffff; 
+    header.open .navigation {
+      top: 80px;
+      opacity: 1;
+      font-size: 8px;
+      visibility: visible;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      background: rgb(56, 117, 96);
+      width: 100%;
+      padding: 40px;
+      text-align: left;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      transition: 1s;
+      -webkit-transition: 1s;
+      -moz-transition: 1s;
+      -ms-transition: 1s;
+      -o-transition: 1s;
+    }
+    
+    /* Optional: Adjust the style of navigation links in the open menu */
+    header.open .navigation li a {
+      font-size: clamp(12px, 3em, 3em);
+      color: #ffffff;
     }
     .hide{
         display: none;
     }
 }
+
+/* loading gif start */
+
+/* .loading-gif {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+/* loading gif end */
