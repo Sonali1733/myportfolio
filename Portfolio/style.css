@@ -114,7 +114,7 @@ main::-webkit-scrollbar{
   margin: 10px;
 }
 
-.aboutMe{
+.sandc{
   margin: 1rem;
   text-align: center;
 }
@@ -284,7 +284,7 @@ main::-webkit-scrollbar{
 }
 /* ... Previous CSS code ... */
 
-.aboutMe {
+.sandc {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -300,17 +300,22 @@ main::-webkit-scrollbar{
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  width: 100%;
   background-color: rgb(255 255 255 / 31%);
   border: 1px solid rgb(255 255 255 / 31%);
   border-radius: 5px;
   padding: 1rem;
+  margin: auto;
   animation: fadeInUp 1s ease;
 }
 
 .projectContainer img {
-  width: 60px;
+  width: auto;
   height: 60px;
-  padding-right: 10px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: rgb(255 255 255 / 31%);
+  padding: 10px;
 }
 
 .projectDescription {
@@ -659,3 +664,66 @@ header .search{
 } */
 
 /* loading gif end */
+
+/* about me */
+/* In your style.css file, update the CSS for the "About Me" section */
+
+.aboutme {
+  background-color: #f4f4f4;
+  padding: 60px 0;
+}
+
+.aboutmeContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.aboutmeImage {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.aboutmeImage img {
+  border-radius: 50%;
+  max-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.aboutmeImage img:hover {
+  transform: scale(1.1);
+}
+
+.aboutmeDetails {
+  flex: 2;
+  padding: 20px;
+}
+
+.aboutmeDetails h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+  animation: fadeInUp 1s ease;
+}
+
+.aboutmeDetails p {
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Keyframe animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
