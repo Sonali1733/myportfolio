@@ -38,7 +38,6 @@ body::before{
   backdrop-filter: saturate(3);
 }
 
-
 body {
   font-family: 'Bitter', serif;
   background-image: url(https://4kwallpapers.com/images/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-dark-wwdc-2020-5120x2880-1432.jpg);
@@ -80,9 +79,6 @@ main::-webkit-scrollbar{
   display: none;
 }
 
-
-
-
 .heroSection{
   margin: 2rem 0;
   width: 100%;
@@ -90,11 +86,6 @@ main::-webkit-scrollbar{
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly; 
-}
-
-.projects {
-  flex: 1;
-  max-width: 100%;
 }
 
 .profileImage{
@@ -114,73 +105,10 @@ main::-webkit-scrollbar{
   margin: 10px;
 }
 
-.sandc{
-  margin: 1rem;
-  text-align: center;
-}
-
-.skillsGrid {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.skill {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.skill img {
-  width: 60px;
-  height: 60px;
-  margin-right: 10px;
-}
-
-.skillDetails {
-  display: flex;
-  flex-direction: column;
-}
-
-.skillName {
-  font-size: 18px;
-}
-
-.rateBar {
-  width: 200px;
-  height: 20px;
-  background-color: #2b2b2b;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.fill {
-  height: 100%;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #d5a3ec, #cf51d8);
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-shadow: 0 0 5px rgba(207, 81, 216, 0.8);
-  display: flex;
-  justify-content: flex-end;
-  animation: fillAnimation 2s ease-in-out forwards;
-}
-
 @keyframes fillAnimation {
   0% {
     width: 0;
   }
-}
-
-.percentage {
-  padding: 5px;
-  background-color: rgba(207, 81, 216, 0.8);
-  color: #fff;
-  border-radius: 5px;
-  font-size: 12px;
-  font-weight: bold;
 }
 
 .glowAnimation {
@@ -195,153 +123,6 @@ main::-webkit-scrollbar{
     box-shadow: 0 0 20px rgba(207, 81, 216, 0.8);
   }
 }
-
-
-.skillsGrid img {
-  width: 60px;
-  height: 60px;
-  margin: 10px;
-  border-radius: 50%;
-  background-color: rgb(255 255 255 / 31%);
-  padding: 10px;
-}
-
-.skillsGrid img:hover {
-  transition: ease-in 300ms;
-  transform: scale(0.85);
-  cursor: pointer;
-}
-
-/* Media Queries */
-@media only screen and (max-width: 768px) {
-  .skillsGrid {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-
-  .skillsGrid img {
-    margin: 10px 5px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .skillsGrid {
-    justify-content: center;
-  }
-}
-
-
-.skillsAndProjects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-@media only screen and(max-width: 720px){
-  .skillsAndProjects{
-    grid-template-columns: [one] 100%;
-    grid-template-rows: [one] [two];
-  }
-}
-
-.skillsAndProjects > .skills, .skillsAndProjects > .projects{
-  min-width: 250px;
-  margin: 1rem;
-  min-height: 250px;
-}
-
-.skillsAndProjects > .skills, .skillsAndProjects > .projects{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  background-color: rgb(255 255 255 / 31%);
-  border: 1px solid rgb(255 255 255 / 31%);
-  border-radius: 5px;
-  padding: 1rem;
-  margin-bottom: 2rem;
-}
-
-.cardHeading{
-  display: block;
-  width: 90%;
-  margin: 0;
-  margin-bottom: 1rem;
-}
-
-.skillsAndProjects > .skills > img{
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
-  margin-right: 15px;
-}
-
-.skillsAndProjects > .skills > img:hover{
-  transition: ease-in 300ms;
-  transform: scale(0.85);
-  cursor: pointer;
-}
-/* ... Previous CSS code ... */
-
-.sandc {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.projectContainer {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-  width: 100%;
-  background-color: rgb(255 255 255 / 31%);
-  border: 1px solid rgb(255 255 255 / 31%);
-  border-radius: 5px;
-  padding: 1rem;
-  margin: auto;
-  animation: fadeInUp 1s ease;
-}
-
-.projectContainer img {
-  width: auto;
-  height: 60px;
-  margin: 10px;
-  border-radius: 50%;
-  background-color: rgb(255 255 255 / 31%);
-  padding: 10px;
-}
-
-.projectDescription {
-  flex: 1;
-}
-
-.projectDescription h4 {
-  margin: 0;
-  font-weight: 500;
-}
-
-.projectDescription p {
-  margin: 0;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 
  /* contact form start */
  .contactForm {
@@ -669,8 +450,12 @@ header .search{
 /* In your style.css file, update the CSS for the "About Me" section */
 
 .aboutme {
+  display: flex;
+  justify-content: center;
   background-color: #f4f4f4;
-  padding: 60px 0;
+  border-radius: 5px;
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 .aboutmeContainer {
@@ -678,12 +463,15 @@ header .search{
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .aboutmeImage {
   flex: 1;
   padding: 20px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .aboutmeImage img {
@@ -693,37 +481,530 @@ header .search{
   transition: transform 0.3s ease;
 }
 
-.aboutmeImage img:hover {
-  transform: scale(1.1);
+.aboutmeImage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 50%, #ff6347 50%);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.aboutmeImage:hover::before {
+  transform: scaleY(1);
 }
 
 .aboutmeDetails {
   flex: 2;
   padding: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
 }
 
 .aboutmeDetails h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 3rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #333;
-  animation: fadeInUp 1s ease;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #007bff;
 }
 
 .aboutmeDetails p {
-  line-height: 1.8;
-  color: #555;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
 /* Keyframe animation */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Additional styles for contact form */
+.contact-form {
+  /* Add your contact form styles here */
+}
+
+/* Customize other sections as needed */
+
+/* skills and certification section :start */
+.sandc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Set the width to 100% on smaller screens */
+@media (max-width: 768px) {
+	.sandc {
+		width: 100%;
+	}
+}
+
+.fill {
+	height: 100%;
+	border-radius: 10px;
+	background: linear-gradient(90deg, #d5a3ec, #cf51d8);
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-shadow: 0 0 5px rgba(207, 81, 216, 0.8);
+	display: flex;
+	justify-content: flex-end;
+	animation: fillAnimation 2s ease-in-out forwards;
+}
+
+@keyframes fillAnimation {
+	0% {
+		width: 0;
+	}
+}
+
+.skills {
+  flex: 1;
+  min-width: 48%; /* Adjust the width as needed */
+margin-right: 20px;}
+
+.skillsAndProjects>.skills>img:hover {
+	transition: ease-in 300ms;
+	transform: scale(0.85);
+	cursor: pointer;
+}
+
+/* ... Previous CSS code ... */
+.skillsAndProjects>.skills>img {
+	width: 60px;
+	height: 60px;
+	margin-bottom: 15px;
+	margin-right: 15px;
+}
+
+
+.skillsAndProjects {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px; /* Adjust the max-width as needed */
+}
+
+
+/* Add media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .skillsAndProjects {
+    flex-direction: column;
+  }
+  
+  .skills,
+  .projects {
+
+    margin: 0; /* Remove the margin between sections on smaller screens */
+  }
+}
+
+.skillsAndProjects>.skills,
+.skillsAndProjects>.projects {
+	min-width: 250px;
+	margin: 1rem;
+	min-height: 250px;
+}
+
+.skillsAndProjects>.skills,
+.skillsAndProjects>.projects {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	background-color: rgb(255 255 255 / 31%);
+	border: 1px solid rgb(255 255 255 / 31%);
+	border-radius: 5px;
+	padding: 1rem;
+	margin-bottom: 2rem;
+}
+
+
+.skillsGrid img {
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+	border-radius: 50%;
+	background-color: rgb(255 255 255 / 31%);
+	padding: 10px;
+}
+
+.skillsGrid img:hover {
+	transition: ease-in 300ms;
+	transform: scale(0.85);
+	cursor: pointer;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+	.skillsGrid {
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+
+	.skillsGrid img {
+		margin: 10px 5px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.skillsGrid {
+		justify-content: center;
+	}
+}
+
+.cardHeading {
+	display: block;
+	width: 90%;
+	margin: 0;
+	margin-bottom: 1rem;
+}
+
+
+.skillsGrid {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.skills {
+  flex: 1;
+}
+
+.skill img {
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+}
+
+.skillDetails {
+	display: flex;
+	flex-direction: column;
+}
+
+.skillName {
+	font-size: 18px;
+}
+
+
+.skillsGrid img {
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+	border-radius: 50%;
+	background-color: rgb(255 255 255 / 31%);
+	padding: 10px;
+}
+
+.skillsGrid img:hover {
+	transition: ease-in 300ms;
+	transform: scale(0.85);
+	cursor: pointer;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+	.skillsGrid {
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+
+	.skillsGrid img {
+		margin: 10px 5px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.skillsGrid {
+		justify-content: center;
+	}
+}
+
+
+.skillsAndProjects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	/* Center horizontally */
+	
+	/* Take up full width */
+	max-width: 50%;
+	/* Limit maximum width for larger screens */
+}
+
+@media only screen and(max-width: 720px) {
+	.skillsAndProjects {
+		grid-template-columns: [one] 100%;
+		grid-template-rows: [one] [two];
+	}
+}
+
+.skillsAndProjects>.skills,
+.skillsAndProjects>.projects {
+	min-width: 250px;
+	margin: 1rem;
+	min-height: 250px;
+}
+
+.skillsAndProjects>.skills,
+.skillsAndProjects>.projects {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	background-color: rgb(255 255 255 / 31%);
+	border: 1px solid rgb(255 255 255 / 31%);
+	border-radius: 5px;
+	padding: 1rem;
+	margin-bottom: 2rem;
+}
+
+
+.skillsAndProjects>.skills>img {
+	width: 60px;
+	height: 60px;
+	margin-bottom: 15px;
+	margin-right: 15px;
+}
+
+.skillsAndProjects>.skills>img:hover {
+	transition: ease-in 300ms;
+	transform: scale(0.85);
+	cursor: pointer;
+}
+
+/* ... Previous CSS code ... */
+
+.sandc {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
+	/* Add padding for spacing */
+}
+
+/* Set the width to 100% on smaller screens */
+@media (max-width: 768px) {
+	.sandc {
+		width: 100%;
+	}
+}
+
+.projects {
+  flex: 1;
+  min-width: 50%; /* Equal 50% width */
+  margin-left: 1%; /* Add a small margin between sections */
+}
+
+.projectContainer {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+	width: 100%;
+	background-color: rgb(255 255 255 / 31%);
+	border: 1px solid rgb(255 255 255 / 31%);
+	border-radius: 5px;
+	padding: 1rem;
+	margin: auto;
+	animation: fadeInUp 1s ease;
+}
+
+.projectContainer img {
+	width: auto;
+	height: 60px;
+	margin: 10px;
+	border-radius: 50%;
+	background-color: rgb(255 255 255 / 31%);
+	padding: 10px;
+}
+
+.projectDescription {
+	flex: 1;
+}
+
+.projectDescription h4 {
+	margin: 0;
+	font-weight: 500;
+}
+
+.projectDescription p {
+	margin: 0;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+.sandc {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* Center horizontally */
+	text-align: center;
+	padding: 20px;
+	/* Add padding for spacing */
+}
+
+.skillsGrid {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.skill {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+	width: 100%;
+	background-color: rgb(255 255 255 / 31%);
+	border: 1px solid rgb(255 255 255 / 31%);
+	border-radius: 5px;
+	padding: 1rem;
+	animation: fadeInUp 1s ease;
+}
+
+.skill img {
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+}
+
+.skillDetails {
+	display: flex;
+	flex-direction: column;
+}
+
+.skillName {
+	font-size: 18px;
+}
+
+
+.projects {
+	flex: 1;
+	max-width: 100%;
+}
+
+
+.rateBar {
+	width: 200px;
+	height: 20px;
+	background-color: #2b2b2b;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+.fill {
+	height: 100%;
+	border-radius: 10px;
+	background: linear-gradient(90deg, #d5a3ec, #cf51d8);
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-shadow: 0 0 5px rgba(207, 81, 216, 0.8);
+	display: flex;
+	justify-content: flex-end;
+	animation: fillAnimation 2s ease-in-out forwards;
+}
+
+
+.percentage {
+	padding: 5px;
+	background-color: rgba(207, 81, 216, 0.8);
+	color: #fff;
+	border-radius: 5px;
+	font-size: 12px;
+	font-weight: bold;
+}
+/* skills and certification section :end */
+
+/* my projects start */
+
+
+.mine-projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(255 255 255 / 31%);
+  border: 1px solid rgb(255 255 255 / 31%);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.projects-heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.mine-project {
+  position: relative;
+  width: calc(33.33% - 20px);
+  height: 300px;
+  margin: 0 10px 20px 0; /* Added margin-right and margin-bottom */
+  overflow: hidden;
+  border: 1px solid #ccc;
+  transition: transform 0.3s;
+  box-sizing: border-box;
+}
+
+.mine-project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mine-project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.mine-project:hover {
+  transform: scale(1.05);
+}
+
+.mine-project:hover .mine-project-overlay {
+  opacity: 1;
+}
+
+/* my projects end */

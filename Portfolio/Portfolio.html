@@ -14,21 +14,26 @@
 <body>
 
   <header>
-      <a href="" class="logo">Sonali</a>
-      <div class="group">
-          <ul class="navigation">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-          </ul>
-          <div class="search">
-              <ion-icon name="grid-outline" class="menuToggle"></ion-icon>
-          </div>
+    <a href="#" class="logo">Sonali</a>
+    <div class="group">
+      <ul class="navigation">
+        <li><a href="#heroSection">Home</a></li>
+        <li><a href="#aboutme">About</a></li>
+        <li><a href="#skillsAndCertifications">Skills & Certifications</a></li>
+        <li><a href="#mine-projects">Projects</a></li>
+        <li><a href="#contactForm">Contact</a></li>
+      </ul>
+      <div class="search">
+        <ion-icon name="grid-outline" class="menuToggle"></ion-icon>
       </div>
-      
+    </div>
   </header>
+
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+  </style>
 
   
 
@@ -70,11 +75,8 @@
       </div>
     </section>
 
+ 
 
-<<<<<<< HEAD
-
-        <section class='aboutMe' id='aboutMe'>
-=======
     <!-- <section class='aboutMe' id='aboutMe'>
       <h1>My Work</h1>
       <div class='skillsAndProjects'>
@@ -93,9 +95,7 @@
         </div> -->
         <section class="aboutme" id="aboutme">
           <div class="aboutmeContainer">
-            <div class="aboutmeImage">
-              <img class="profileImage" src="Images/Profile.jpeg">
-            </div>
+            
             <div class="aboutmeDetails">
               <h1>About Me</h1>
               <p>Hello, I'm Sonali Donadkar, an aspiring software developer with a passion for programming and problem-solving. I am currently working as an Intern at Bharat Intern, where I am gaining valuable experience in various technologies and software development methodologies.</p>
@@ -106,16 +106,15 @@
             </div>
           </div>
         </section>
-        
 
-        <section class='sandc' id='sandc'>
->>>>>>> 96555cb696a15b9757cacdf20b20b79f5c0e4112
-          <h1>Skills and Certifications</h1>
-          <div class='skillsAndProjects'>
-            <div class='skills' id='skills'>
+
+        <div class="sandc" id="skillsAndCertifications">
+          <div class="skillsAndProjects">
+            <div class="skills" id="skills">
+              <!-- Your skills section content here -->
               <h1 class='cardHeading'>Skills</h1>
               <div class="skillsGrid">
-
+                
                 <div class="skill">
                   <img src="Images/c.png" title="C">
                   <div class="skillDetails">
@@ -127,7 +126,7 @@
                     </div>
                   </div>
                 </div>
-
+        
                 <div class="skill">
                   <img src="Images\java.png" title="Java">
                   <div class="skillDetails">
@@ -139,7 +138,7 @@
                     </div>
                   </div>
                 </div>
-
+        
                 <div class="skill">
                   <img src="Images\python.png" title="Python">
                   <div class="skillDetails">
@@ -151,7 +150,7 @@
                     </div>
                   </div>
                 </div>
-
+        
                 <div class="skill">
                   <img src="Images\sql.png" title="sql">
                   <div class="skillDetails">
@@ -163,7 +162,7 @@
                     </div>
                   </div>
                 </div>
-
+        
                 <div class="skill">
                   <img src="Images\powerbi.png" title="PowerBi">
                   <div class="skillDetails">
@@ -175,7 +174,7 @@
                     </div>
                   </div>
                 </div>
-
+        
                 <div class="skill">
                   <img src="Images\html.png" title="HTML">
                   <div class="skillDetails">
@@ -187,7 +186,7 @@
                     </div>
                   </div>
                 </div>
-
+        
                 <div class="skill">
                   <img src="Images\css.png" title="CSS">
                   <div class="skillDetails">
@@ -199,28 +198,26 @@
                     </div>
                   </div>
                 </div>
-                
-
-                <!-- Add more skills with rate bars and images as needed -->
-              </div>
             </div>
-            <div class='projects' id='projects'>
-              <h1 class='cardHeading'>Certifications</h1>
+          </div>
+        </div>
+
+        
+        <div class="skillsAndCertifications">
+          <section class='sandc' id='sandc'>
+            <h1>Certifications</h1>
+            <div class='skillsAndProjects'>
+              <div class='skills' id='skills'>
+
+
               <div class='projectContainer'>
-<<<<<<< HEAD
-                <img src="Portfolio\Images\Logo\YBI Logo.png">
-                <div class='projectDescription'>
-                  <h4>Data Science and Machine
-                    Learning Internship</h4>
-                  <p>YBI Foundation - July 2023</p>
-=======
                 <img src="Images\unisoft.png">
                 <div class='projectDescription'>
                   <h4>C & C++</h4>
                   <p>Unisoft Technologies - 2022</p>
->>>>>>> 96555cb696a15b9757cacdf20b20b79f5c0e4112
                 </div>
               </div>
+  
               <div class='projectContainer'>
                 <img src="Images\unisoft.png">
                 <div class='projectDescription'>
@@ -228,6 +225,7 @@
                   <p>Unisoft Technologies - 2022</p>
                 </div>
               </div>
+
               <div class='projectContainer'>
                 <img src="Images\codingninja.png">
                 <div class='projectDescription'>
@@ -235,6 +233,7 @@
                   <p>Coding Ninjas - 2022</p>
                 </div>
               </div>
+
               <div class='projectContainer'>
                 <img src="Images\coursera.png">
                 <div class='projectDescription'>
@@ -242,6 +241,7 @@
                   <p>Coursera - 2022</p>
                 </div>
               </div>
+
               <div class='projectContainer'>
                 <img src="Images\ybi.png">
                 <div class='projectDescription'>
@@ -249,6 +249,7 @@
                   <p>YBI - 2022</p>
                 </div>
               </div>
+
               <div class='projectContainer'>
                 <img src="Images\hackerrank.png">
                 <div class='projectDescription'>
@@ -256,17 +257,39 @@
                   <p>HackerRank - 2022</p>
                 </div>
               </div>
-              
-              <!-- Add more certification project containers as needed -->
+                
+              </div>
             </div>
-            
           </div>
         </section>
-        
-    
 
-    
-    <!-- ... Previous HTML code ... -->
+        <!-- my projects start-->
+        <section class="mine-projects" id="mine-projects">
+          <h1 class="projects-heading">My Projects</h1>
+          <div class="mine-project">
+              <img src="Images/1_xR4m0oOKz_jRgQU4Oge53g.jpg" alt="Stock Market Prediction">
+              <div class="mine-project-overlay">
+                  <h2>Stock Market Prediction of BSE and NSE Data</h2>
+                  <p>Predicting stock market trends using historical BSE and NSE data.</p>
+              </div>
+          </div>
+          <div class="mine-project">
+              <img src="Images/EMS2.png" alt="Employee Management System">
+              <div class="mine-project-overlay">
+                  <h2>Employee Management System</h2>
+                  <p>Web-based system for managing employee information and tasks.</p>
+              </div>
+          </div>
+          <div class="mine-project">
+              <img src="Images/CCFDS.png" alt="Credit Card Fraud Detection System">
+              <div class="mine-project-overlay">
+                  <h2>Credit Card Fraud Detection System</h2>
+                  <p>Using machine learning to detect fraudulent credit card transactions.</p>
+              </div>
+          </div>
+      </section>
+        <!-- my projects end -->
+        
 
     <section class='contactForm' id='contactForm'>
       <h2>Let's Connect</h2>
