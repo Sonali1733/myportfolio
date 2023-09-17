@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio! This repository showcases my work, skills, and experiences. Feel free to explore the projects and information presented here to learn more about me.
 
-![image](https://github.com/Sonali1733/myportfolio/blob/main/Images/portfolio.png)
+![image](Images\portfolio.png)
 
 
 
